@@ -37,3 +37,4 @@ lerna-debug.log*
 # Service Files
 /src/schema.gql
 docker
+.env
