@@ -1,5 +1,5 @@
-import {Field, InputType} from "@nestjs/graphql";
-import {IsDateString, IsNotEmpty} from "class-validator";
+import { Field, InputType } from '@nestjs/graphql';
+import { IsDateString, IsNotEmpty } from 'class-validator';
 
 @InputType()
 export class CreateTaskInput {
@@ -11,6 +11,6 @@ export class CreateTaskInput {
   @IsDateString()
   dueDate: string;
 
-  @Field({nullable: true})
+  @Field({ nullable: true })
   description?: string;
 }
