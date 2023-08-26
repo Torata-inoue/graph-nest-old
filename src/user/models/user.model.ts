@@ -1,7 +1,7 @@
 import {Field, HideField, Int, ObjectType} from "@nestjs/graphql";
 
 @ObjectType()
-export class UserModel {
+export class User {
   @Field(() => Int)
   id: number;
 
@@ -15,8 +15,8 @@ export class UserModel {
   password: string;
 
   @Field()
-  createdAt: string;
+  createdAt: Date;
 
   @Field()
-  updatedAt: string;
+  updatedAt: Date;
 }
