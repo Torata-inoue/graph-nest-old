@@ -11,7 +11,7 @@ export class TaskService {
 
   async getTasks(userId: number): Promise<Task[]> {
     return this.prismaService.task.findMany({
-      where: {userId}
+      where: { userId },
     });
   }
 
@@ -22,7 +22,7 @@ export class TaskService {
         name,
         dueDate,
         description,
-        userId
+        userId,
       },
     });
   }
@@ -30,15 +30,15 @@ export class TaskService {
   async updateTask(updateTaskInput: UpdateTaskInput): Promise<Task> {
     const { id, name, dueDate, status, description } = updateTaskInput;
     return this.prismaService.task.update({
-      data: {name, dueDate, status, description},
-      where: {id},
+      data: { name, dueDate, status, description },
+      where: { id },
     });
   }
 
   async deleteTask(deleteTaskInput: DeleteTaskInput): Promise<Task> {
     const { id } = deleteTaskInput;
     return this.prismaService.task.delete({
-      where: {id},
+      where: { id },
     });
   }
 }
