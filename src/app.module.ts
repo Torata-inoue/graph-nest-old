@@ -4,6 +4,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
 import { TaskModule } from './task/task.module';
 import { PrismaModule } from './prisma/prisma.module';
+import { UserModule } from './user/user.module';
 import * as process from 'process';
 
 @Module({
@@ -15,6 +16,7 @@ import * as process from 'process';
     }),
     TaskModule,
     PrismaModule,
+    UserModule,
   ],
 })
 export class AppModule {}
