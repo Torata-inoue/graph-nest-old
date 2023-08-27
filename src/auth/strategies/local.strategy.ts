@@ -2,9 +2,10 @@ import {PassportStrategy} from "@nestjs/passport";
 import {Strategy} from "passport-local";
 import {AuthService} from "../auth.service";
 import {User} from "@prisma/client";
-import {UnauthorizedException} from "@nestjs/common";
+import {Injectable, UnauthorizedException} from "@nestjs/common";
 
-export class LocalStrategies extends PassportStrategy(Strategy) {
+@Injectable()
+export class LocalStrategy extends PassportStrategy(Strategy) {
   constructor(private readonly authService: AuthService) {
     super({usernameField: 'email'});
   }
