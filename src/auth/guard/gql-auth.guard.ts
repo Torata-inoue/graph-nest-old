@@ -1,6 +1,6 @@
-import {AuthGuard} from "@nestjs/passport";
-import {ExecutionContext} from "@nestjs/common";
-import {GqlExecutionContext} from "@nestjs/graphql";
+import { AuthGuard } from '@nestjs/passport';
+import { ExecutionContext } from '@nestjs/common';
+import { GqlExecutionContext } from '@nestjs/graphql';
 
 export class GqlAuthGuard extends AuthGuard('local') {
   constructor() {

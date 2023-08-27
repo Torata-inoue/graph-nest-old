@@ -4,8 +4,8 @@ import { User } from '@prisma/client';
 import { CreateUserInput } from './dto/createUser.input';
 import { User as UserModel } from './models/user.model';
 import { GetUserArgs } from './dto/getUser.args';
-import {UseGuards} from "@nestjs/common";
-import {JwtAuthGuard} from "../auth/guard/jwt-auth.guard";
+import { UseGuards } from '@nestjs/common';
+import { JwtAuthGuard } from '../auth/guard/jwt-auth.guard';
 
 @Resolver()
 export class UserResolver {

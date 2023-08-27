@@ -5,8 +5,8 @@ import { CreateTaskInput } from './dto/createTask.input';
 import { Task } from '@prisma/client';
 import { UpdateTaskInput } from './dto/updateTask.input';
 import { DeleteTaskInput } from './dto/deleteTask.input';
-import {UseGuards} from "@nestjs/common";
-import {JwtAuthGuard} from "../auth/guard/jwt-auth.guard";
+import { UseGuards } from '@nestjs/common';
+import { JwtAuthGuard } from '../auth/guard/jwt-auth.guard';
 
 @Resolver()
 export class TaskResolver {
