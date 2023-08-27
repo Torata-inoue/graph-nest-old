@@ -5,7 +5,6 @@ import { User } from '@prisma/client';
 import * as bcrypt from 'bcrypt';
 import { SignInResponse } from './dto/signIn.response';
 import { JwtPayload } from './types/jwtPayload.type';
-import { use } from 'passport';
 
 @Injectable()
 export class AuthService {
